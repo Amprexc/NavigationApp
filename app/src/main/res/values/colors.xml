@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="colorPrimary">#1976D2</color> <!-- Azul intenso para encabezados y botones principales -->
+    <color name="colorPrimaryDark">#004BA0</color> <!-- Azul oscuro para la barra de estado -->
+    <color name="colorAccent">#FFC107</color> <!-- Amarillo para botones de acción flotantes y elementos destacados -->
+
+    <!-- Additional primary brand colors -->
+    <color name="colorPrimaryLight">#BBDEFB</color> <!-- Azul claro para fondos y elementos secundarios -->
+    <color name="colorSecondary">#0288D1</color> <!-- Azul medio para otros elementos importantes -->
+    <color name="colorSecondaryDark">#01579B</color> <!-- Azul más oscuro para variación de elementos oscuros -->
+    <color name="colorSecondaryLight">#B3E5FC</color> <!-- Azul muy claro para fondos y elementos secundarios -->
+    <color name="colorAccentDark">#FFA000</color> <!-- Amarillo oscuro para acentos y botones alternativos -->
+    <color name="colorAccentLight">#FFECB3</color> <!-- Amarillo claro para acentos más suaves -->
+    <color name="colorTertiary">#388E3C</color> <!-- Verde para elementos terciarios -->
+    <color name="colorTertiaryDark">#1B5E20</color> <!-- Verde oscuro para variación de elementos terciarios -->
+    <color name="colorTertiaryLight">#C8E6C9</color> <!-- Verde claro para fondos y elementos secundarios -->
+
+    <!-- Map colors -->
+    <color name="mapWater">#64B5F6</color> <!-- Azul claro para agua -->
+    <color name="mapLand">#81C784</color> <!-- Verde claro para tierra -->
+    <color name="mapRoad">#E0E0E0</color> <!-- Gris claro para carreteras -->
+    <color name="mapBuilding">#FFAB91</color> <!-- Naranja claro para edificios -->
+
+    <!-- Text colors -->
+    <color name="textPrimary">#212121</color> <!-- Negro para texto principal -->
+    <color name="textSecondary">#757575</color> <!-- Gris oscuro para texto secundario -->
+    <color name="textOnPrimary">#FFFFFF</color> <!-- Blanco para texto en botones primarios -->
+
+    <!-- Background colors -->
+    <color name="background">#FAFAFA</color> <!-- Blanco grisáceo para fondo de pantalla -->
+    <color name="surface">#FFFFFF</color> <!-- Blanco para superficies de tarjetas y paneles -->
+
+    <!-- Error color -->
+    <color name="error">#D32F2F</color> <!-- Rojo para mensajes de error -->
+
+    <!-- Miscellaneous colors -->
+    <color name="divider">#BDBDBD</color> <!-- Gris claro para líneas divisorias -->
+</resources>
