@@ -43,12 +43,14 @@
             android:gravity="bottom"
             android:layout_margin="20dp">
             <Button
+                android:id="@+id/userButtom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Usuario"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorPrimary"/>
             <Button
+                android:id="@+id/otherButtom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Otro"
