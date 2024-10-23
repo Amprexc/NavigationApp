@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".RegisterActivity">
+    <include layout="@layout/action_bar_toolbar"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="5dp"
                 >
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_register_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Ingresa nombre"
@@ -58,6 +60,7 @@
                 android:layout_marginLeft="5dp"
                 >
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Ingresa correo"
@@ -84,6 +87,7 @@
                 android:layout_marginLeft="5dp"
                 >
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_register_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Ingresa contraseña"
@@ -98,7 +102,9 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="bottom">
+
             <Button
+                android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Registrar"
