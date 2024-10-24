@@ -1,6 +1,7 @@
 package com.andrey.navigationapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -33,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
 
-    AlertDialog.Builder mDialog = new AlertDialog.Builder(this);
+    //AlertDialog.Builder mDialog = new AlertDialog.Builder(this);
 
     Toolbar mToolbar;
 
@@ -51,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mDialog.setTitle("Autenticando");
+        //mDialog.setTitle("Autenticando");
         //mDialog = new AlertDialog().builder().setContext(LoginActivity.this).setMessage("Autenticando").build();
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
@@ -61,10 +62,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Inicia sesión");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        mToolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(mToolbar);
+//        getSupportActionBar().setTitle("Inicia sesión");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void login() {
@@ -75,12 +76,15 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Ingrese datos", Toast.LENGTH_SHORT);
             return;
         }
-        mDialog.show();
+        //mDialog.show();
         mAuth.signInWithEmailAndPassword(strEmail,strPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(LoginActivity.this, "Login correcto", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, ClientMapActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
                 }else{
                     Toast.makeText(LoginActivity.this, "Email o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }

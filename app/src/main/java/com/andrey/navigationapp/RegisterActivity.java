@@ -1,5 +1,6 @@
 package com.andrey.navigationapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -41,10 +42,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Registrarse");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        mToolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(mToolbar);
+//        getSupportActionBar().setTitle("Registrarse");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mSharedPreferences = getApplicationContext().getSharedPreferences("typeUser", MODE_PRIVATE);
 
@@ -126,6 +127,9 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegisterActivity.this, ClientMapActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
                     }else{
                         Toast.makeText(RegisterActivity.this, "Usuario no registrado", Toast.LENGTH_SHORT).show();
                     }
